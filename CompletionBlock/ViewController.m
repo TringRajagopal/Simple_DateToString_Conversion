@@ -42,7 +42,7 @@ NSString *convertedDateToString;
     NSDate *pickedDate = datePicker.date;
     [self convertDateToStringWithDate:pickedDate completionBlock:^(BOOL completed){
         if(completed){
-            NSLog(@"Process Completed");
+            NSLog(@"Process Completed edited for commit");
             NSLog(@"%@",convertedDateToString);
         }
     }];
