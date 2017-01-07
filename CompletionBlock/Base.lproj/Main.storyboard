@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,48 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="nF8-7W-mgj">
+                                <rect key="frame" x="0.0" y="219" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="505462462.36255997">
+                                    <!--2017-01-07 06:14:22 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pickthedate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsN-ir-mlr">
+                                <rect key="frame" x="26" y="130" width="323" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVL-UH-wAM">
+                                <rect key="frame" x="164" y="463" width="46" height="30"/>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="datePicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sar-tt-kod"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kVL-UH-wAM" firstAttribute="top" secondItem="nF8-7W-mgj" secondAttribute="bottom" constant="28" id="4ic-iH-LD9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BsN-ir-mlr" secondAttribute="trailing" constant="10" id="6Il-EX-k1G"/>
+                            <constraint firstItem="kVL-UH-wAM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="148" id="F1b-Yb-Ibg"/>
+                            <constraint firstAttribute="trailing" secondItem="nF8-7W-mgj" secondAttribute="trailing" id="FtS-uS-f4C"/>
+                            <constraint firstItem="nF8-7W-mgj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gjw-H2-TW0"/>
+                            <constraint firstItem="BsN-ir-mlr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Ssh-0l-aoL"/>
+                            <constraint firstItem="nF8-7W-mgj" firstAttribute="top" secondItem="BsN-ir-mlr" secondAttribute="bottom" constant="62.5" id="UA2-Mf-vac"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kVL-UH-wAM" secondAttribute="trailing" constant="149" id="Vpe-d4-Qbs"/>
+                            <constraint firstItem="BsN-ir-mlr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="110" id="dhb-0F-NyF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kVL-UH-wAM" secondAttribute="bottom" constant="174" id="ttc-Pc-6Yr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="nF8-7W-mgj" id="iO7-9e-EPs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
