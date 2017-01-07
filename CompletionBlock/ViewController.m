@@ -20,12 +20,6 @@ NSString *convertedDateToString;
 
 }
 
-//-(void)sampleCompletionBlockToConvertDateToString:(NSDate *)dateToConvert completionBlock:(void (^)(BOOL))complHandler{
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-//    [formatter setDateFormat:@"MMM dd yyyy HH:mm:ss"];
-//    NSString *stringFromDate = [formatter stringFromDate:dateToConvert];
-//}
-
 -(void)convertDateToStringWithDate:(NSDate *)dateToConvert completionBlock:(customCompletionBlock)withCompletionBlock{
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"MMM dd yyyy"];
